@@ -1,0 +1,29 @@
+formatter: markdown
+
+settings:
+  anchor: true
+  hide-empty: true
+  indent: true
+
+output:
+  file: "README.md"
+  mode: inject
+  template: |-
+    <!-- BEGIN_AUTOMATIC_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_AUTOMATIC_TF_DOCS -->
+
+content: |-
+  {{ .Header }}
+
+  {{ .Requirements }}
+
+  {{ .Providers }}
+
+  {{ .Modules }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+
+  {{ .Resources }}
